@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"> 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<title>scrolldeck.js</title>
+	
+	<link rel="stylesheet" href="css/normalize.css" type="text/css">
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<link rel="author" href="https://plus.google.com/107766061849006545830"/>
+	
+	<script src="js/jquery-1.8.2.min.js"></script>
+	<script src="js/jquery.scrollTo-1.4.3.1.min.js"></script>
+	<script src="js/jquery.scrollorama.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/jquery.scrolldeck.js"></script>
+</head>
+<body>
+	
+	
+	<div id="header">
+		<img src="img/Header 1logo.png" />
+		<a href="#Company" class="button_menu">Company &nbsp; /</a>
+		<a href="#Services" class="button_menu">Services&nbsp; /</a>
+		<a href="#Technologies" class="button_menu">Technologies &nbsp; /</a>
+		<a href="#Partners" class="button_menu">Partners &nbsp; /</a>
+		<a href="#Portfolio" class="button_menu">Portfolio &nbsp; /</a>
+		<a href="#Contacts" class="button_menu">Contacts &nbsp; /</a>
+		 
+		
+	</div>
+
+	
+		
+	<div class="slide" id="Company">
+		<h1>How to Use</h1>
+		
+	</div>
+
+	
+	
+	<div class="slide" id="Services">
+		
+	</div>
+	
+	<div class="slide" id="Technologies">
+		
+	</div>
+	
+	<div class="slide" id="Partners">
+		
+	</div>
+	<div class="slide" id="Portfolio">
+		
+	</div>
+
+	<div class="slide" id="Contacts">
+		
+	</div>
+	<script>
+	  $(document).ready(function() {
+		  
+			var deck = new $.scrolldeck({
+				buttons: '.button_menu',
+				easing: 'easeInOutExpo'
+			});
+			
+			// add other animations using the scrolldeck.controller (see Scrollorama plugin)
+			console.log(deck.controller);
+			deck.controller.animate('#instructions',{ duration: 1000, property:'opacity', end: 0 });
+		  
+	  });
+	</script>
+
+	
+
+</body></html>
